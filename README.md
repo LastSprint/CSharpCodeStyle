@@ -117,13 +117,13 @@ sampleSelector {
 ```C#
 public override bool Equals (object obj) {
 
-if(this==null) {
+if(this == null) {
 
 return false;
 
 }
 
-if(object==null) {
+if(object == null) {
 
 return false;
 
@@ -137,7 +137,7 @@ return false;
 
 Sampletemp = obj as Sample;
 
-if(temp ==null){
+if(temp == null){
 
 return false;
 
