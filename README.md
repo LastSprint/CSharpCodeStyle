@@ -5,6 +5,7 @@
 `private` - именуется в стиле lowerCamelCase с нижним подчеркиванием перед названием:_samplePrivateVariableName
 
 `protected`/`public` - именуется в стиле UpperCamelCase:SampleField
+
 `const` поля - именуются в стиле UpperCamelCase
 
 ### Переменные
