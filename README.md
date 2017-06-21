@@ -2,9 +2,10 @@
 
 ## Оформление
 ### Поля и свойства
-<li>`private` - именуется в стиле lowerCamelCase с нижним подчеркиванием перед названием:_samplePrivateVariableName</li>
-<li>`protected`/`public` - именуется в стиле UpperCamelCase:SampleField</li>
-<li>`const` поля - именуются в стиле UpperCamelCase</li>
+`private` - именуется в стиле lowerCamelCase с нижним подчеркиванием перед названием:_samplePrivateVariableName
+
+`protected`/`public` - именуется в стиле UpperCamelCase:SampleField
+`const` поля - именуются в стиле UpperCamelCase
 
 ### Переменные
 Любые локальные переменные и переменные - параметры метода именуются в стиле lowerCamelCase
