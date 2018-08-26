@@ -117,42 +117,33 @@ sampleSelector {
 ```C#
 public override bool Equals (object obj) {
 
-if(this == null) {
+  if(this == null) {
+    return false;
+  }
 
-return false;
+  if(object == null) {
+    return false;
+  }
 
-}
+  if(this.GetHashCode != obj.GetHashCode) {
+    return false;
+  }
 
-if(object == null) {
+  var temp = obj as Sample;
 
-return false;
+  if(temp == null) {
+    return false;
+  }
 
-}
+  // ручная проверка, например полей. Рекомендуется делать в таком виде:
 
-if(this.GetHashCode != obj.GetHashCode) {
+  var equalsFlag =this.Field1 == temp.Field1 &&this.Field2 == temp.Field2….
 
-return false;
-
-}
-
-Sampletemp = obj as Sample;
-
-if(temp == null){
-
-return false;
-
-}
-
-// ручная проверка, например полей. Рекомендуется делать в таком виде:
-
-bool equalsFlag =this.Field1 == temp.Field1 &&this.Field2 == temp.Field2….
-
-returnequalsFlag;
-
+  return equalsFlag;
 }
 ```
 ### `GetHashCode`
-Метод GetHashCodeдолжен возвращать одинаковые значения в течении всей жизни объекта. То есть, он должен полагаться только на НЕИЗМЕНЯЕМЫЕ члены класса.
+Метод GetHashCode должен возвращать одинаковые значения в течении всей жизни объекта. То есть, он должен полагаться только на НЕИЗМЕНЯЕМЫЕ члены класса.
 
 Паттерн хэш функции: `this.unchangedField1 ^ this.unchangedField2 ^ …..`
 
